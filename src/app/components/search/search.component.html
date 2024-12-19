@@ -1,0 +1,26 @@
+<!-- <div >
+    <input #s type="text" placeholder="search food mine"  (keyup.enter)="search(s.value)" [value]="searchTerm"/>
+    <button  (click)="search(s.value)">Search</button>
+  </div>  -->
+
+  <div class="container mt-4 mb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group rounded-group"style="height:50px">
+          <input #s type="text" class="form-control" placeholder="Search food items" (keyup.enter)="search(s.value)" [value]="searchTerm"/>
+          <div class="input-group-append">
+            <button style="height:50px" class="btn btn-primary" (click)="search(s.value)">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div>
+    <input #s type="text" placeholder="Search Food Mine!"
+     (keyup.enter)="search(s.value)"
+     [value]="searchTerm" />
+    <button (click)="search(s.value)">Search</button>
+  </div> -->
+  
+  

@@ -1,0 +1,25 @@
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .img-fluid {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .img-fluid:hover {
+    transform: scale(1.1);
+  }
+  
+  .badge {
+    font-size: 0.9rem;
+  }
+  

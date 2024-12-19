@@ -1,0 +1,6 @@
+<div *ngIf="errorMessages.length > 0 && showErrorsWhen" class="invalid-feedback">
+    <div *ngFor="let message of errorMessages">
+      {{ message }}
+    </div>
+  </div>
+  

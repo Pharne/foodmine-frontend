@@ -1,0 +1,80 @@
+
+
+<app-not-found
+[visible]="!food"
+notFoundMessage="Food Not Found"
+resetLinkText="Back To Homepage">
+</app-not-found>
+
+
+<div *ngIf="food" class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card border-0 shadow-lg rounded-4" style="max-width: 1000px;">
+      <div class="row g-0">
+        <!-- Image Column -->
+        <div class="col-md-6">
+          <img [src]="food.imageUrl" class="img-fluid rounded-start h-100" alt="{{food.name}}" />
+        </div>
+        <!-- Details Column -->
+        <div class="col-md-6">
+          <div class="card-body p-4">
+            <!-- Food Title and Description -->
+            <h1 class="card-title fw-bold">{{food.name}}</h1>
+            <p class="card-text text-muted">
+              Enjoy this delicious dish with supporting text and more details about its features. A perfect meal for any occasion!
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated: 3 minutes ago</small>
+            </p>
+  
+            <!-- Favorite Icon -->
+            <div class="my-3">
+              <span class="fs-4 {{food.favorite ? 'text-danger' : 'text-muted'}}">
+                ❤️
+              </span>
+            </div>
+  
+            <!-- Cooking Time and Price -->
+            <div class="row text-start mb-4">
+              <div class="col-6">
+                <span class="text-muted">Cook Time:</span>
+                <strong>{{food.cookTime}}</strong>
+              </div>
+              <div class="col-6 text-end">
+                <h5 class="fw-bold">
+                  <span class="text-muted">Price:</span> {{food.price | currency}}
+                </h5>
+              </div>
+            </div>
+  
+            <!-- Origins -->
+            <div class="mb-3">
+              <h6 class="text-muted mb-2">Origins:</h6>
+              <div class="d-inline-block me-2 mb-2" *ngFor="let origin of food.origins">
+                <span class="badge bg-danger text-light px-3 py-2 rounded-pill">
+                  {{origin}}
+                </span>
+              </div>
+            </div>
+  
+            <!-- Tags -->
+            <div class="mb-4">
+              <h6 class="text-muted mb-2">Tags:</h6>
+              <div class="d-inline-block me-2 mb-2" *ngFor="let tag of food.tags">
+                <a routerLink="/tag/{{tag}}" class="badge bg-primary text-light px-3 py-2 rounded-pill text-decoration-none">
+                  {{tag}}
+                </a>
+              </div>
+            </div>
+  
+            <!-- Add to Cart Button -->
+            <div class="d-grid">
+              <button (click)="addToCart()" class="btn btn-primary btn-lg fw-bold">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<!-- 
+ <div *ngIf="visible">
+    {{notFoundMessage}}
+    <a [routerLink]="resetLinkRoute">{{resetLinkText}}</a>
+</div> --> 
+<div *ngIf="visible" class="alert alert-danger text-center position-fixed  top-50 start-50 translate-middle" role="alert">
+    <h2>{{notFoundMessage}}</h2>
+    <a [routerLink]="resetLinkRoute" class="btn btn-danger rounded-5">{{resetLinkText}}</a>
+</div>
+
+
+<!-- <h1 *ngIf="visible">not found</h1> -->

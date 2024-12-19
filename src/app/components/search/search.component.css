@@ -1,0 +1,15 @@
+.rounded-group {
+    border-radius: 30px; /* Adjust as needed for a more rounded look */
+    overflow: hidden; /* Ensures the border-radius applies to the input and button as well */
+  }
+  
+  .rounded-group .form-control {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .rounded-group .btn-primary {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  

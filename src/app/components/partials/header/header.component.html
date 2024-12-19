@@ -1,0 +1,35 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-danger" routerLink="/"> My Food </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <!-- Login link should only appear when not authenticated -->
+          <li class="nav-item" *ngIf="!isAuth">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+
+          <!-- User dropdown menu when authenticated -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ user.name }}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Orders</a></li>
+              <li><a class="dropdown-item" href="#" (click)="logout()">LogOut</a></li>
+            </ul>
+          </li>
+
+          <!-- Cart link -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart-page">Cart <span>{{ cartQuantity }}</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

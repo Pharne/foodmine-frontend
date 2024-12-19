@@ -1,0 +1,132 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg border-0">
+          <div class="card-body p-5">
+            <h2 class="text-center mb-4 fw-bold" style="font-family: 'Arial', sans-serif; color: #007bff;">
+              Register
+            </h2>
+            <form [formGroup]="registerForm" (ngSubmit)="submit()" class="p-3">
+  
+              <!-- Name Field -->
+              <div class="mb-4 position-relative">
+                <input-container label="Name">
+                  <div class="input-group">
+                    
+                    <input
+                      type="text"
+                      id="name"
+                      formControlName="name"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': isSubmitted && fc.name.invalid}"
+                    />
+                  </div>
+                  <input-validation
+                    [control]="fc.name"
+                    [showErrorsWhen]="isSubmitted"
+                  ></input-validation>
+                </input-container>
+              </div>
+  
+              <!-- Email Field -->
+              <div class="mb-4 position-relative">
+                <input-container label="Email">
+                  <div class="input-group">
+                    
+                    <input
+                      type="email"
+                      id="email"
+                      formControlName="email"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': isSubmitted && fc.email.invalid}"
+                    />
+                  </div>
+                  <input-validation
+                    [control]="fc.email"
+                    [showErrorsWhen]="isSubmitted"
+                  ></input-validation>
+                </input-container>
+              </div>
+  
+              <!-- Password Field -->
+              <div class="mb-4 position-relative">
+                <input-container label="Password">
+                  <div class="input-group">
+                    
+                    <input
+                      type="password"
+                      id="password"
+                      formControlName="password"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': isSubmitted && fc.password.invalid}"
+                    />
+                  </div>
+                  <input-validation
+                    [control]="fc.password"
+                    [showErrorsWhen]="isSubmitted"
+                  ></input-validation>
+                </input-container>
+              </div>
+  
+              <!-- Confirm Password Field -->
+              <div class="mb-4 position-relative">
+                <input-container label="Confirm Password">
+                  <div class="input-group">
+                 
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      formControlName="ConfirmPassword"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': isSubmitted && fc.ConfirmPassword.invalid}"
+                    />
+                  </div>
+                  <input-validation
+                    [control]="fc.ConfirmPassword"
+                    [showErrorsWhen]="isSubmitted"
+                  ></input-validation>
+                </input-container>
+              </div>
+  
+              <!-- Address Field -->
+              <div class="mb-4 position-relative">
+                <input-container label="Address">
+                  <div class="input-group">
+                    
+                    <input
+                      type="text"
+                      id="address"
+                      formControlName="address"
+                      class="form-control"
+                      [ngClass]="{'is-invalid': isSubmitted && fc.address.invalid}"
+                    />
+                  </div>
+                  <input-validation
+                    [control]="fc.address"
+                    [showErrorsWhen]="isSubmitted"
+                  ></input-validation>
+                </input-container>
+              </div>
+  
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                class="btn btn-primary w-100 fw-bold"
+                style="background: linear-gradient(90deg, #007bff, #0056b3); border: none;"
+              >
+                Register
+              </button>
+            </form>
+  
+            <p class="text-center mt-4">
+              <a href="#" class="text-decoration-none" style="color: #007bff;">Forgot Password?</a>
+            </p>
+            <p class="text-center">
+              <small>Already have an account? <a href="/login" class="text-decoration-none" style="color: #007bff;">Login</a></small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

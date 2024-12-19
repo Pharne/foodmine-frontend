@@ -1,0 +1,15 @@
+<input-container [label]="label">
+<div class="input-group">
+    
+    <input
+      [type]="type"
+      id="email"
+      [formControl]="formControl"
+     
+    />
+  </div>
+
+  <input-validation
+  [control]="control"
+  [showErrorsWhen]="showErrorsWhen"></input-validation>
+</input-container>
